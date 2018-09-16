@@ -1,0 +1,100 @@
+{
+	"singleton": false,
+	"dependencies": [],
+	"category": "automation_basic",
+	"author": "Mattias Forss",
+	"homepage": "",
+	"icon": "icon.png",
+	"moduleName": "LGWebOSTV",
+	"version": "1.0.0",
+	"maturity": "stable",
+	"repository": {
+		"type": "git",
+		"source": ""
+	},
+	"defaults": {
+		"title": "__m_title__",
+		"description": "__m_descr__",
+		"device": {},
+		"configuration": { "pollingEnabled": true, "knownApps": [], "apps": [] },
+		"mail_helper": "__h_nomail__",
+		"mail_button": "__b_createmail__",
+		"mail_confirm": "__m_createmail__"
+	},
+	"schema": {
+		"type": "object",
+		"properties": {
+			"device": {
+				"type": "object",
+				"properties": {
+					"ip": {
+						"type": "string",
+						"required": true
+					},
+					"mac": {
+						"type": "string",
+						"required": true
+					}
+				}
+			},
+			"configuration": {
+				"type": "object",
+				"properties": {
+					"pollingEnabled": {
+						"type": "boolean",
+						"required": false
+					},
+					"clientKey": {
+						"type": "string",
+						"required": false
+					},
+					"knownApps": {
+						"type": "array",
+						"required": false
+					},
+					"apps": {
+						"type": "array",
+						"required": false
+					}
+				}
+			}
+		}
+	},
+	"options": {
+		"fields": {
+			"device": {
+				"label": "__l_device_settings__",
+				"fields": {
+					"ip": {
+						"removeDefaultNone": false,
+						"noneLabel": "__l_required__",
+						"label": "__l_ip_address__",
+						"helper": "__h_ip_address__"
+					},
+					"mac": {
+						"removeDefaultNone": false,
+						"noneLabel": "__l_required__",
+						"label": "__l_mac_address__",
+						"helper": "__h_mac_address__"
+					}
+				}
+			},
+			"configuration": {
+				"label": "__l_configuration__",
+				"fields": {
+					"pollingEnabled": {
+						"type": "checkbox",
+						"removeDefaultNone": false,
+						"label": "__l_enable_polling__"
+					},
+					"apps": {
+						"type": "select",
+						"label": "__l_apps__",
+						"helper": "__h_apps__"
+					}
+				}
+			}
+		}
+	},
+	"postRender": "loadFunction:postRender.js"
+}

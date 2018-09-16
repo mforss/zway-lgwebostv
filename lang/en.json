@@ -1,0 +1,13 @@
+{
+	"m_title":"LG WebOS TV",
+	"m_descr":"LG WebOS TV will create virtual devices to control power, volume and apps on your LG WebOS TV.<br><br>Start by enabling mobile TV on your TV to make it possible to turn on. LG Connect Apps must be enabled in the network settings of newer TVs. You may also need to enable Wake-on-LAN on your TV to turn it on. Enable it by going to Settings > General > Mobile TV On > Turn On Via WiFi. Please note that 'WiFi' in this case only refers to the mobile device you are using (i.e. phone, tablet, etc.) which must be connected to WiFi to wake your TV. However, your TV must have a wired (Ethernet) connection because it is a limitation of the Wake-on-LAN protocol. Upon first connect from Z-Way to your TV, the client must be approved when requested by your TV.<br><br>The MAC-address of the device is needed to wake the TV when it is off. A Wake-on-LAN network message is broadcast to the network interface of the TV to turn it on.<br><br>Please note that there may be some stability issues with power on due to the nature of the Z-Way socket library. Also note that power on will normally only work if both the Z-Way controller and your TV are connected to the same local network.",
+	"l_device_settings":"Device settings",
+	"l_ip_address": "IP-address",
+	"h_ip_address": "The IP-address can be found in the network settings of your TV.",
+	"l_mac_address": "MAC-address",
+	"h_mac_address": "The MAC-address can be found in the network settings of your TV or on a label beside the network input of your TV.",
+	"l_configuration": "Module configuration",
+	"l_enable_polling": "Enable polling (on by default to sync with state from the TV)",
+	"l_apps": "App switches",
+	"h_apps": "Apps can be configured after the TV has been connected with Z-Way. The plugin automatically detects started apps when it is active and app switches can be added from the list of known apps."
+}
